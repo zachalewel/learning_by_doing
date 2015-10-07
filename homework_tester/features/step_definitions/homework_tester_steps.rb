@@ -56,7 +56,7 @@ end
 
 Given /^the file '([^\']+)' exists and is executable$/ do |filename|
   if File.exists?(filename)
-    expect(File.executable?(filename)).to be_true
+    expect(File.executable?(filename)).to be_truthy
   else
     pending "#{filename} needs to be created and executable"
   end
